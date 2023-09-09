@@ -21,11 +21,3 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-
-.env
-
-frontender/node_modules
-
-frontender/package-lock.json
-
-package-lock.json
