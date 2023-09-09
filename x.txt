@@ -1,0 +1,38 @@
+{
+  "compilerOptions": {
+    // "target": "ES2016",
+    "target": "ES6",
+    "lib": ["dom", "dom.iterable", "esnext"],
+
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "noUnusedParameters": true,                       /* Raise an error when a function parameter isn't read. */
+    // "noUnusedLocals": true,                           /* Raise an error when a local variables aren't read. */
+    "noImplicitReturns": true,                        /* Report error when not all code paths in function return a value. */
+    // "noFallthroughCasesInSwitch": true,               /* Report errors for fallthrough cases in switch statement. */
+
+
+
+    // "module": "commonjs",
+    "pretty": true,
+    "sourceMap": true,
+    "declaration": true,
+    "outDir": "dist",
+    "baseUrl": "src",
+
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+  },
+  "include": ["src/**/*.ts", "prisma/UserServices.ts", "Controllers/**/*.ts"],
+}
