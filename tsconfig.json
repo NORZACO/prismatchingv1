@@ -108,7 +108,9 @@
   },
   // Specified 'include' paths were '["src/**/*"]' and 'exclude' paths were '["node_modules"]'.ts
   "include": [
-    "src/**/*"
+    "src/**/*",
+    "services/**/*",
+    "bin/**/*"
   ],
   "exclude": [
     "node_modules"

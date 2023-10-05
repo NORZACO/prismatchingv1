@@ -151,9 +151,9 @@ function Contact() {
             <Nav.Link href="about">About</Nav.Link>
             <Nav.Link href="contact">Contact</Nav.Link>
             <Nav.Link href="chart">Chart</Nav.Link>
-            {/* <Nav.Link href="#action1">Home</Nav.Link>
-            <Nav.Link href="#action2">Link</Nav.Link>*/}
-            {/* <Nav.Link href="#action1">Home</Nav.Link>  */}
+          <Nav.Link href="login">Login</Nav.Link>
+              <Nav.Link href="admin">Admin</Nav.Link>
+            <Nav.Link href="dashboard">Dashboard</Nav.Link> 
             
             <NavDropdown title="More" id="navbarScrollingDropdown">
               <NavDropdown.Item href="#action3">Action</NavDropdown.Item>

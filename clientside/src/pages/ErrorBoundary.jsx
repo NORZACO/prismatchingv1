@@ -1,6 +1,6 @@
 import React from "react";
 
-export class ErrorBoundary extends React.Component {
+export default class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
@@ -18,6 +18,7 @@ export class ErrorBoundary extends React.Component {
       return <h1>Something went wrong.</h1>;
     }
 
+    // eslint-disable-next-line react/prop-types
     return this.props.children;
   }
 }
