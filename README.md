@@ -6,28 +6,12 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, the following are the feature that will be included.:
 
-
-
-1. mo of Full-Stack Authentication and Authorization
-2. NodeJS Environment Setup and Packages to be Install
-3. React Environment Setup and Packages to be Install
-4. Start Server-Side Coding
-5. Registration Page in React
-6. Setup React-Router-Dom
-7. Login Page in React JS
-8. Registration Page API call
-9. Register API in Node/Express JS
-10. Password Hashing using bcrypt
-11. Login Page Call API
-12. Login API in Node/Express JS
-13. Compare Password using bcrypt
-14. Generate Token with JSON Web Token
-15. Store Token inside Cookies
-16. Protected Routes Implementation
-17. Implement Logout Functionality
-18. Subscribe Channel Like Video
+The idea is assign user permissio by drag and drop 
 
 ### `npm start`
+Runs the app in the development mode
+
+
 
 Runs the app in the development mode.
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
