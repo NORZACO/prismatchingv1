@@ -1,12 +1,14 @@
-import { ModelForm } from "./ModelForm";
-import { Button } from "react-bootstrap";
+// import { ModelForm } from "./ModelForm";
+// import { Button } from "react-bootstrap";
 import React from "react";
 
-function AlbumPage() {
+export default function AlbumPage() {
   const URL = "http://127.0.0.1:4000/authgroup";
   const [auth_group, setAuthGroup] = React.useState(null);
   const [loading, setLoading] = React.useState(false);
   const [error, setError] = React.useState(null);
+  // chnageColor onlick
+  // const [changeColor, setChangeColor] = React.useState(false);
 
   React.useEffect(() => {
     setLoading(true);
@@ -43,15 +45,22 @@ function AlbumPage() {
   }
 
   if (error)
-    return (
-      <div className="alert alert-danger" role="alert">
-        error: {error.message}
-      </div>
-    );
+    {
+      return (
+        <>
+        <br />
+        <div className="container-fluid">
+          <div className="alert alert-danger" role="alert">
+            error: {error.message}
+          </div>
+          </div>
+        </>
+      );
+    }
 
   console.log(auth_group);
 
-  if (auth_group)
+  if (auth_group) {
     return (
       <div className="album py-5 bg-body-tertiary">
         <div className="container">
@@ -59,22 +68,10 @@ function AlbumPage() {
             {auth_group.data[" result"].map((album) => (
               <div key={album.id} className="col">
                 <div className="card shadow-sm">
-                  {/* <svg
-                    className="bd-placeholder-img card-img-top"
-                    width="100%"
-                    height="225"
-                    xmlns="http://www.w3.org/2000/svg"
-                    role="img"
-                    aria-label="Placeholder: Thumbnail"
-                    preserveAspectRatio="xMidYMid slice"
-                    focusable="false"
-                  >
-                    <title>Placeholder</title>
-                    <rect width="100%" height="100%" fill="#55595c" />
-                    <text x="50%" y="50%" fill="#eceeef" dy=".3em">
-                    {album.name}
-                    </text>
-                  </svg> */}
+                  <img
+                    src="https://picsum.photos/seed/picsum/200/50"
+                    alt={album.name}
+                  />
                   <div className="card-body">
                     <p className="card-text">{album.name}</p>
                     <div className="d-flex justify-content-between align-items-center">
@@ -102,96 +99,7 @@ function AlbumPage() {
         </div>
       </div>
     );
+  }
 }
 
-//   return (
-//     <div className="album py-5 bg-body-tertiary">
-//       <div className="container">
-//         <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-//           <div className="col">
-//             <div className="card shadow-sm">
-//               <svg
-//                 className="bd-placeholder-img card-img-top"
-//                 width="100%"
-//                 height="225"
-//                 xmlns="http://www.w3.org/2000/svg"
-//                 role="img"
-//                 aria-label="Placeholder: Thumbnail"
-//                 preserveAspectRatio="xMidYMid slice"
-//                 focusable="false"
-//               >
-//                 <title>Placeholder</title>
-//                 <rect width="100%" height="100%" fill="#55595c"></rect>
-//                 <text x="50%" y="50%" fill="#eceeef" dy=".3em">
-//                   Thumbnail
-//                 </text>
-//               </svg>
-//               <div className="card-body">
-//                 <p className="card-text">
-//                   This is a wider card with supporting text below as a natural
-//                   lead-in to additional content. This content is a little bit
-//                   longer.
-//                 </p>
-//                 <div className="d-flex justify-content-between align-items-center">
-//                   <div className="btn-group">
-//                     <button
-//                       type="button"
-//                       className="btn btn-sm btn-outline-secondary"
-//                     >
-//                       View
-//                     </button>
-//                     <button
-//                       type="button"
-//                       className="btn btn-sm btn-outline-secondary"
-//                     >
-//                       Edit
-//                     </button>
-//                   </div>
-//                   <small className="text-body-secondary">9 mins</small>
-//                 </div>
-//               </div>
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// }
 
-export default function DashBoardPage() {
-  return (
-    <>
-      <br />
-      <br />
-      <h3
-        style={{
-          textAlign: "center",
-          color: "blue",
-          fontSize: "50px",
-          fontFamily: "Arial",
-          fontWeight: "bold",
-          fontStyle: "italic",
-
-          // textDecoration: "underline"
-        }}
-      >
-        Auth Group Page
-      </h3>
-      <br />
-      {/* add button */}
-      <Button
-        style={{ marginLeft: "20px", backgroundColor: "blue", color: "white", fontWeight: "bold",/*className="dropdown-item"*/ }}
-        data-bs-toggle="modal"
-        data-bs-target="#exampleModal"
-        data-bs-whatever="@mdo"
-        href={"#"}
-        variant="primary"
-      >
-        Add New Auth Group
-      </Button>
-
-      <AlbumPage />
-      <ModelForm />
-    </>
-  );
-}

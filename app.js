@@ -17,10 +17,14 @@ app.set("view engine", "ejs");
 // Allow requests from http://localhost:5173
 const corsOptions = {
   origin: [
-    "http://localhost:5173",
-    'https://vzv3mjdr-4000.euw.devtunnels.ms/'
-  ]
+    // "http://localhost:5173",
+    "http://localhost:3000/",
+    // 'http://localhost:3000',
+    
+
+  ],
 };
+
 app.use(cors(corsOptions));
 app.use(logger("dev"));
 app.use(express.json());
@@ -47,7 +51,7 @@ app.use(function (err, req, res, next) {
 
   // render the error page
   res.status(err.status || 500);
-  res.json({ 'error' : err.message });
+  res.json({ error: err.message });
 });
 
 module.exports = app;

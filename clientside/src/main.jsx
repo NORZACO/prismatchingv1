@@ -10,8 +10,9 @@ import NoPage from "./pages/NoPage.jsx";
 import Layout from "./pages/Layout";
 import BarChart from "./pages/BarChartPage";
 import LoginModelPage from "./pages/Login";
-import DashBoardPage from "./pages/DashBoardPage";
-
+import AlbumPage from "./pages/DashBoardPage";
+import LayerDash from "./pages/dashBoard/LayerDash";
+import AuthUserPage from "./pages/dashBoard/AuthUserPage.jsx";
 // import { BrowserRouter, Routes, Route } from "react-router-dom";
 // import Home from "./pages/Home";
 // import About from "./pages/About";
@@ -23,18 +24,17 @@ export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/"  element={<Layout />}>
+        <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NoPage />} />
           <Route path="chart" element={<BarChart />} />
           <Route path="login" element={<LoginModelPage />} />
-          <Route path="dashboard" element={<DashBoardPage />}>
-            <Route path="*" element={<NoPage />} />
-            
+          <Route path="dashboard" element={< LayerDash />}>
+            <Route index element={<AlbumPage />} />
+            <Route path="authuser" element={<AuthUserPage />} />
           </Route>
-
         </Route>
       </Routes>
     </BrowserRouter>
