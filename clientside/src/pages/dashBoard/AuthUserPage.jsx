@@ -26,29 +26,10 @@ function Example() {
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-const buttStyles = { 
-  marginTop: '50px',
-  marginLeft: '50px',
-  marginBottom: '50px',
-  marginRight: '50px',
-  width: '200px',
-  height: '100px',
-  fontSize: '20px',
-  fontWeight: 'bold',
-  color: 'white',
-  backgroundColor: 'blue',
-  borderColor: 'blue',
-  borderRadius: '10px',
-  border: '1px solid blue',
-  boxShadow: '5px 5px 5px 5px gray',
-
- }
   return (
-  
-
     <>
     <Container> 
-      <Button styles={buttStyles}  onClick={handleShow}>
+      <Button onClick={handleShow}>
         Launch
       </Button>
 
