@@ -1,65 +1,28 @@
-import React from "react";
-import {
-  BarChart,
-  Bar,
-  XAxis,
-  YAxis,
-  CartesianGrid,
-  Tooltip,
-  Legend,
-} from "recharts";
-import ErrorBoundary from "./ErrorBoundary";
+import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
 
-export default function Contact() {
-  const [userData, setuserData] = React.useState([]);
-  const [loading, setLoading] = React.useState(false);
-  const [error, setError] = React.useState(null);
+function BarChart() {
+  return (
+    <div
+      className="modal hide"
+      style={{ display: 'block', position: 'initial' }}
+    >
+      <Modal.Dialog>
+        <Modal.Header closeButton>
+          <Modal.Title>Modal title</Modal.Title>
+        </Modal.Header>
 
-  React.useEffect(() => {
-    setLoading(true);
-    fetch("http://127.0.0.1:4000")
-      .then((response) => response.json())
-      .then(setuserData)
-      .catch(setError)
-      .finally(() => setLoading(false));
-  }, []);
+        <Modal.Body>
+          <p>Modal body text goes here.</p>
+        </Modal.Body>
 
-  if (error) return (
-    <div className="container my-5">
-      <div className="p-5 text-center bg-body-tertiary rounded-3">
-        <h1 className="text-body-emphasis">Error</h1>
-        <p className="col-lg-8 mx-auto fs-5 text-muted">
-          {error.message}
-        </p>
-      </div>
+        <Modal.Footer>
+          <Button variant="secondary">Close</Button>
+          <Button variant="primary">Save changes</Button>
+        </Modal.Footer>
+      </Modal.Dialog>
     </div>
   );
-
-  console.log("User--->", userData.users);
-
-  const userDataResult = userData?.users?.map((user) => {
-    return {
-      name: user.name,
-      id: user.id,
-    };
-  });
-
-  console.log("User Data Result--->", userDataResult);
-
-  if (loading) return <h1>Loading.....</h1>;
-
-  return (
-    <ErrorBoundary>
-      <div className="wrapper">
-        <BarChart width={800} height={300} data={userDataResult}>
-          <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey="name" />
-          <YAxis dataKey="id" />
-          <Tooltip />
-          <Legend />
-          <Bar dataKey="id" fill="#8884d8" />
-        </BarChart>
-      </div>
-    </ErrorBoundary>
-  );
 }
+
+export default BarChart;
