@@ -1,8 +1,6 @@
 // import { Link} from "react-router-dom";
 // import { useState } from "react";
 
-
-
 // export default function Layout() {
 //     // change button link to blue when clicked
 //     const [active, setActive] = useState(false);
@@ -126,13 +124,12 @@
 //     );
 // }
 
-
-import Button from 'react-bootstrap/Button';
-import Container from 'react-bootstrap/Container';
-import Form from 'react-bootstrap/Form';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
+import Button from "react-bootstrap/Button";
+import Container from "react-bootstrap/Container";
+import Form from "react-bootstrap/Form";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
+import NavDropdown from "react-bootstrap/NavDropdown";
 // import Contact from './Contact';
 
 function Contact() {
@@ -144,17 +141,17 @@ function Contact() {
         <Navbar.Collapse id="navbarScroll">
           <Nav
             className="me-auto my-2 my-lg-0"
-            style={{ maxHeight: '100px' }}
+            style={{ maxHeight: "100px" }}
             navbarScroll
           >
             <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link href="about">About</Nav.Link>
             <Nav.Link href="contact">Contact</Nav.Link>
             <Nav.Link href="chart">Chart</Nav.Link>
-          <Nav.Link href="login">Login</Nav.Link>
-              <Nav.Link href="admin">Admin</Nav.Link>
-            <Nav.Link href="dashboard">Dashboard</Nav.Link> 
-            
+            <Nav.Link href="login">Login</Nav.Link>
+            <Nav.Link href="admins">Admin</Nav.Link>
+            <Nav.Link href={"/dashboard"}>Dashboard</Nav.Link>
+
             <NavDropdown title="More" id="navbarScrollingDropdown">
               <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
               <NavDropdown.Item href="#action4">
@@ -165,7 +162,7 @@ function Contact() {
                 Something else here
               </NavDropdown.Item>
             </NavDropdown>
-            
+
             {/* <Nav.Link href="#" disabled>
               Link
             </Nav.Link> */}
@@ -186,5 +183,3 @@ function Contact() {
 }
 
 export default Contact;
-
-
