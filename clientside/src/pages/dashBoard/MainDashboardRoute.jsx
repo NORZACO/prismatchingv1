@@ -3,11 +3,13 @@ import AlbumPage from "../DashBoardPage";
 import DashboardLayer from "./DashboardLayer";
 import AuthUserPage from "./AuthUserPage";
 
+import Auth_group_permissionsPage from "./auth_group_permissions";
+
 export default function MainDashboardRoute() {
   return <Route path="dashboard" element={<DashboardLayer />}>
     <Route index element={<AlbumPage />} />
     <Route path="authuser" element={<AuthUserPage />} />
-    <Route path="auth_group_permissions" element={<h1> auth_group_permissions</h1>} />
+    <Route path="auth_group_permissions" element={<Auth_group_permissionsPage />} />
     <Route path="auth_permission" element={<h1> auth_permission</h1>} />
     <Route path="auth_user" element={<h1> auth_user</h1>} />
     <Route path="auth_user_groups" element={<h1> auth_user_groups</h1>} />

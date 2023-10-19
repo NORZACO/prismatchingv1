@@ -8,7 +8,7 @@ function GetJokes({ results }) {
       <div className="p-5 text-center bg-body-tertiary rounded-3">
         <h1 className="text-body-emphasis"> Random Jokes From <a href="https://v2.jokeapi.dev/joke/Any"> Jokes API </a> </h1>
         <p className="col-lg-8 mx-auto fs-5 text-muted">
-          {results.setup}
+          {/* {results.setup} */}
         </p>
         <p className="col-lg-8 mx-auto fs-5 text-muted">
           { results.delivery }
