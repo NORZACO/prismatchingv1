@@ -16,7 +16,8 @@ export function NavigaterLayerForDashboard() {
             aria-controls="navbarSupportedContent"
             aria-expanded="false"
             aria-label="Toggle navigation"
-          ></button>
+          >
+          </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item"><Link className="nav-link" to="authuser"> Authuser</Link> </li>
@@ -26,19 +27,8 @@ export function NavigaterLayerForDashboard() {
               <li className="nav-item"><Link className="nav-link" to="bloge_category"> bloge_category</Link> </li>
               <li className="nav-item"><Link className="nav-link" to="bloge_post_category"> bloge_post_category</Link> </li>
               <li className="nav-item"><Link className="nav-link" to="super_admin_log"> super_admin_log</Link> </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="about">
-                  About
-                </Link>
-              </li>
-              <li className="nav-item dropdown">
-                <Link
-                  className="nav-link dropdown-toggle"
-                  to="/contact"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
+              <li className="nav-item"><Link className="nav-link" to="about">About</Link> </li>
+              <li className="nav-item dropdown"><Link className="nav-link dropdown-toggle" to="/contact" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Dropdown{" "}
                 </Link>
                 <ul className="dropdown-menu">
